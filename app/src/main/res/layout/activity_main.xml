@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D8D9DA"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/instruction"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/firstNumber"
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/instruction"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        tools:ignore="MissingConstraints"
+        android:gravity="center_horizontal" />
+
+    <EditText
+        android:id="@+id/firstNumber"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:background="@drawable/rectangle"
+        android:gravity="center_horizontal"
+        android:hint="0"
+        android:padding="5dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/secondNumber"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/instruction"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/secondNumber"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:background="@drawable/rectangle"
+        android:gravity="center_horizontal"
+        android:hint="0"
+        android:padding="5dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/plus"
+        app:layout_constraintLeft_toLeftOf="@id/firstNumber"
+        app:layout_constraintRight_toRightOf="@id/firstNumber"
+        app:layout_constraintTop_toTopOf="@id/firstNumber"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/plus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle"
+        android:contentDescription="@string/plus_sign"
+        android:gravity="center_horizontal|center_vertical"
+        android:onClick="addition"
+        android:text="+"
+        android:textAlignment="center"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/minus"
+        app:layout_constraintTop_toBottomOf="@id/instruction"
+        tools:ignore="MissingClass" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/minus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle"
+        android:gravity="center_horizontal|center_vertical"
+        android:onClick="subtraction"
+        android:text="-"
+        android:textAlignment="center"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/plus"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/instruction"
+        tools:ignore="MissingConstraints" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/multiply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle"
+        android:gravity="center_horizontal|center_vertical"
+        android:onClick="multiplication"
+        android:text="*"
+        android:textAlignment="center"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/division"
+        app:layout_constraintTop_toTopOf="@id/plus" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/division"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle"
+        android:gravity="center_horizontal|center_vertical"
+        android:onClick="division"
+        android:text="/"
+        android:textAlignment="center"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/multiply"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/minus" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

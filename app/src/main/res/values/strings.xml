@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Calculator</string>
+    <string name="first_number">Type here first number</string>
+    <string name="second_number">Type here second number</string>
+    <string name="plus_sign">+</string>
+    <string name="return_to_main_page">return to main page</string>
+    <string name="instruction">Enter integers then press button with the required operator.</string>
+</resources>
